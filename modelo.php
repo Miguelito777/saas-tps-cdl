@@ -59,7 +59,7 @@ class Tienda extends Conexion
 
 	public function evaluaPasswordActual($passwordActual){
 		$newPassEncript = sha1($passwordActual);
-		$query = "SELECT * from usersadmin where password = '$newPassEncript'";
+		$query = "SELECT * from usersadmin where password = '$passwordActual'";
 		parent:: __construct();
 		if (!$userAdmin = $this->conexion->query($query)){
 			printf("Error %s\n",$this->conexion->error);
@@ -86,7 +86,7 @@ class Tienda extends Conexion
 		}
 		if ($typeUser == 2) {
 			$passwordEncript = sha1($password);
-			$query = "SELECT * from usersadmin where nombre = '$usuario' and password = '$password'";
+			$query = "SELECT * from usersadmin where nombre = '$usuario' and password = '$passwordEncript'";
 			parent:: __construct();
 			$result = $this->conexion->query($query);
 			$usuarioEncontrado = $result->num_rows;
