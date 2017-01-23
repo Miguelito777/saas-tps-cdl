@@ -86,7 +86,7 @@ class Tienda extends Conexion
 		}
 		if ($typeUser == 2) {
 			$passwordEncript = sha1($password);
-			$query = "SELECT * from usersadmin where nombre = '$usuario' and password = '$passwordEncript'";
+			$query = "SELECT * from usersadmin where nombre = '$usuario' and password = '$password'";
 			parent:: __construct();
 			$result = $this->conexion->query($query);
 			$usuarioEncontrado = $result->num_rows;
