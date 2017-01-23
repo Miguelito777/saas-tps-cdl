@@ -9,7 +9,7 @@ class Conexion
 
 	function __construct()
 	{
-		$this->conexion = new mysqli("localhost","root","Jesus8","puntoventalibreria");		
+		$this->conexion = new mysqli("mysql.hostinger.mx","u454814338_init","Jesus8","u454814338_tps");		
 	}
 }
 
