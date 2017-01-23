@@ -5,7 +5,7 @@
 
 
         function __construct(){
-            $this->conn = new mysqli("  mysql.hostinger.mx","u454814338_init","Jesus8","u454814338_tps");
+            $this->conn = new mysqli("mysql.hostinger.mx","u454814338_init","Jesus8","u454814338_tps");
             }
         }
 
